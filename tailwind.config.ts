@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { DEFAULT_CIPHERS } from "tls";
 
 export default {
   content: [
@@ -11,7 +12,23 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        yellowPanda: "#FFD900",
+        bluePanda: {
+          primary: "#00223F",
+          DEFAULT: "#015197",
+          footer: "#014A89",
+        },
       },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(50%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+
     },
   },
   plugins: [],
